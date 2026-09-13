@@ -35,6 +35,10 @@ export interface EducationItem {
   period: string;
   description: string;
   highlights: string[];
+  certificateImage?: string;
+  certificateId?: string;
+  isCertificate?: boolean;
+  badgeText?: string;
 }
 
 export interface StrengthItem {

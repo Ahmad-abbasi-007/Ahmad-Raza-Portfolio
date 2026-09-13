@@ -69,6 +69,13 @@ FEATURED PROJECTS
    - Built a collection of reusable, typed React components including buttons, inputs, cards, and modals using TypeScript.
    - Demonstrated understanding of props, hooks, and component composition.
 
+EXPERIENCE & CERTIFICATIONS
+----------------------------
+- Web Development Intern — Fentix Tech (April 2026 – June 2026)
+  Location: Abbottabad, KPK, Pakistan (Remote)
+  Certificate ID: FT-WDI-2026-0122 | Completed: 29 June 2026
+  - Two-month remote web development internship focusing on frontend workflows, modern component design, and project execution.
+
 EDUCATION
 ---------
 - Bachelor of Science in Computer Science (2022 – 2026)

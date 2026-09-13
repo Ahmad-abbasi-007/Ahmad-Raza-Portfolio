@@ -4,6 +4,7 @@ import ecommerceImg from '../assets/projects/ecommerce.jpg';
 import landingImg from '../assets/projects/landing.jpg';
 import componentsImg from '../assets/projects/components.jpg';
 import fypImg from '../assets/projects/fyp-scholarship.png';
+import fentixCertImg from '../assets/certificates/fentix-internship-certificate.jpg';
 
 export const contactData: ContactInfo = {
   name: "Ahmad Raza",
@@ -264,6 +265,23 @@ export const projectsData: Project[] = [
 ];
 
 export const educationData: EducationItem[] = [
+  {
+    id: "fentix-internship",
+    degree: "INTERNSHIP COMPLETION CERTIFICATE",
+    institution: "FENTIX TECH",
+    location: "Abbottabad, Pakistan (Remote)",
+    period: "May 2026 – June 2026",
+    isCertificate: true,
+    certificateImage: fentixCertImg,
+    certificateId: "FT-WDI-2026-0122",
+    badgeText: "VERIFIED CERTIFICATE",
+    description: "Successfully completed a two-month remote internship as a Web Development Intern at Fentix Tech, Abbottabad, Khyber Pakhtunkhwa, Pakistan.",
+    highlights: [
+      "Role: Web Development Intern at Fentix Tech",
+      "Recognized for: Professional Skills, Technical Expertise & Project Achievement",
+      "Official Certificate ID: FT-WDI-2026-0122 • Completed: 29 June 2026"
+    ]
+  },
   {
     id: "bs-cs",
     degree: "Bachelor of Science in Computer Science",
