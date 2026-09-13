@@ -5,6 +5,9 @@ import landingImg from '../assets/projects/landing.jpg';
 import componentsImg from '../assets/projects/components.jpg';
 import fypImg from '../assets/projects/fyp-scholarship.png';
 import fentixCertImg from '../assets/certificates/fentix-internship-certificate.jpg';
+import profileImg from '../assets/profile.jpg';
+
+export { profileImg };
 
 export const contactData: ContactInfo = {
   name: "Ahmad Raza",

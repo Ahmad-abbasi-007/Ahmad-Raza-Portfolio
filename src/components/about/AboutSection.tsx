@@ -1,6 +1,18 @@
 import React from 'react';
-import { Code2, Atom, GraduationCap, Sparkles, CheckCircle2, UserCheck, ArrowUpRight, Compass, ShieldCheck } from 'lucide-react';
-import { aboutData } from '../../data/portfolioData';
+import { 
+  Code2, 
+  Atom, 
+  GraduationCap, 
+  Sparkles, 
+  CheckCircle2, 
+  UserCheck, 
+  ArrowUpRight, 
+  Compass, 
+  ShieldCheck, 
+  MapPin, 
+  Briefcase 
+} from 'lucide-react';
+import { aboutData, contactData, profileImg } from '../../data/portfolioData';
 
 const iconMap = {
   Code2: Code2,
@@ -30,10 +42,60 @@ export const AboutSection: React.FC = () => {
           <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mt-3" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          {/* Left Column: Bio & Core Philosophy */}
-          <div className="lg:col-span-6 flex flex-col gap-6">
+          {/* Left Column: Portrait Photo Card */}
+          <div className="lg:col-span-4 flex flex-col gap-6">
+            <div className="glass-card p-4 sm:p-5 rounded-3xl relative overflow-hidden group hover:border-cyan-500/50 transition-all duration-300 shadow-2xl">
+              
+              {/* Photo Container with Gradient Border */}
+              <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-700/80 shadow-lg">
+                <img
+                  src={profileImg}
+                  alt={contactData.name}
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
+
+                {/* Floating Status Pill */}
+                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-slate-700/80 text-[11px] font-mono font-semibold text-emerald-400 flex items-center gap-1.5 shadow-md">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                  <span>Available for Hire</span>
+                </div>
+
+                {/* Bottom Overlay Gradient with Name */}
+                <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-[#090D16] via-[#090D16]/70 to-transparent">
+                  <h3 className="text-lg font-bold text-white font-display">
+                    {contactData.name}
+                  </h3>
+                  <p className="text-xs text-cyan-400 font-mono">
+                    {contactData.role}
+                  </p>
+                </div>
+              </div>
+
+              {/* Quick Info Badges */}
+              <div className="mt-4 space-y-2 text-xs">
+                <div className="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-300">
+                  <GraduationCap className="w-4 h-4 text-cyan-400 shrink-0" />
+                  <span className="truncate">COMSATS Univ. Islamabad (Abbottabad)</span>
+                </div>
+                <div className="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-300">
+                  <MapPin className="w-4 h-4 text-cyan-400 shrink-0" />
+                  <span>{contactData.location}</span>
+                </div>
+                <div className="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-300">
+                  <Briefcase className="w-4 h-4 text-cyan-400 shrink-0" />
+                  <span>Frontend Dev (React • TypeScript)</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Right Column: Bio, Career Goal, Focus Areas & Highlights */}
+          <div className="lg:col-span-8 flex flex-col gap-6">
+            
+            {/* Bio Card */}
             <div className="glass-card p-6 sm:p-8 rounded-2xl relative">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-slate-950 shadow-md">
@@ -81,44 +143,44 @@ export const AboutSection: React.FC = () => {
               </div>
             </div>
 
-          </div>
+            {/* 4 Highlight Cards Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {aboutData.highlights.map((highlight, index) => {
+                const IconComponent = iconMap[highlight.icon as keyof typeof iconMap] || Code2;
+                return (
+                  <div
+                    key={index}
+                    className="glass-card p-6 rounded-2xl flex flex-col justify-between group hover:border-cyan-500/50 relative overflow-hidden"
+                  >
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-xl group-hover:bg-cyan-500/10 transition-colors" />
+                    
+                    <div>
+                      <div className="w-12 h-12 rounded-xl bg-slate-900/90 border border-slate-700/80 flex items-center justify-center text-cyan-400 mb-4 group-hover:scale-110 group-hover:border-cyan-500/50 transition-all duration-300 shadow-sm">
+                        <IconComponent className="w-6 h-6" />
+                      </div>
 
-          {/* Right Column: 4 Highlight Cards */}
-          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {aboutData.highlights.map((highlight, index) => {
-              const IconComponent = iconMap[highlight.icon as keyof typeof iconMap] || Code2;
-              return (
-                <div
-                  key={index}
-                  className="glass-card p-6 rounded-2xl flex flex-col justify-between group hover:border-cyan-500/50 relative overflow-hidden"
-                >
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-xl group-hover:bg-cyan-500/10 transition-colors" />
-                  
-                  <div>
-                    <div className="w-12 h-12 rounded-xl bg-slate-900/90 border border-slate-700/80 flex items-center justify-center text-cyan-400 mb-4 group-hover:scale-110 group-hover:border-cyan-500/50 transition-all duration-300 shadow-sm">
-                      <IconComponent className="w-6 h-6" />
+                      <span className="text-[11px] font-mono text-cyan-400/90 font-medium block mb-1">
+                        {highlight.tagline}
+                      </span>
+
+                      <h3 className="text-base font-bold text-white font-display mb-2 group-hover:text-cyan-300 transition-colors">
+                        {highlight.title}
+                      </h3>
+
+                      <p className="text-xs text-slate-400 leading-relaxed">
+                        {highlight.description}
+                      </p>
                     </div>
 
-                    <span className="text-[11px] font-mono text-cyan-400/90 font-medium block mb-1">
-                      {highlight.tagline}
-                    </span>
-
-                    <h3 className="text-base font-bold text-white font-display mb-2 group-hover:text-cyan-300 transition-colors">
-                      {highlight.title}
-                    </h3>
-
-                    <p className="text-xs text-slate-400 leading-relaxed">
-                      {highlight.description}
-                    </p>
+                    <div className="mt-4 pt-3 border-t border-slate-800/60 flex items-center justify-between text-[11px] font-mono text-slate-500 group-hover:text-cyan-400 transition-colors">
+                      <span>0{index + 1} // FOCUS</span>
+                      <ArrowUpRight className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </div>
                   </div>
+                );
+              })}
+            </div>
 
-                  <div className="mt-4 pt-3 border-t border-slate-800/60 flex items-center justify-between text-[11px] font-mono text-slate-500 group-hover:text-cyan-400 transition-colors">
-                    <span>0{index + 1} // FOCUS</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </div>
-                </div>
-              );
-            })}
           </div>
 
         </div>

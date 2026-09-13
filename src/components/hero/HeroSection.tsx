@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, Download, Send, Mail, MapPin } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../common/SocialIcons';
-import { contactData } from '../../data/portfolioData';
+import { contactData, profileImg } from '../../data/portfolioData';
 import { InteractiveTerminal } from './InteractiveTerminal';
 
 interface HeroSectionProps {
@@ -32,18 +32,31 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
           {/* Left Hero Content */}
           <div className="lg:col-span-7 flex flex-col items-start text-left z-10">
             
-            {/* Status Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/80 shadow-md backdrop-blur-md mb-6 animate-in fade-in slide-in-from-top-4 duration-500">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
-              </span>
-              <span className="text-xs font-medium text-slate-300">
-                CS Graduate • COMSATS University Islamabad
-              </span>
-              <span className="text-xs text-cyan-400 font-mono font-semibold flex items-center gap-1">
-                <MapPin className="w-3 h-3 inline" /> Lahore, PK
-              </span>
+            {/* Profile Avatar & Status Pill Badge */}
+            <div className="flex flex-wrap items-center gap-3.5 mb-6 animate-in fade-in slide-in-from-top-4 duration-500">
+              <div className="relative group/avatar shrink-0">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl p-[2px] bg-gradient-to-tr from-cyan-400 via-blue-500 to-indigo-500 shadow-[0_0_20px_rgba(6,182,212,0.4)] group-hover/avatar:shadow-[0_0_30px_rgba(6,182,212,0.6)] transition-all">
+                  <img
+                    src={profileImg}
+                    alt={contactData.name}
+                    className="w-full h-full object-cover rounded-[14px]"
+                  />
+                </div>
+                <span className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-emerald-400 border-2 border-[#090D16] shadow-sm animate-pulse" title="Available for hire" />
+              </div>
+
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/80 shadow-md backdrop-blur-md">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                </span>
+                <span className="text-xs font-medium text-slate-300">
+                  CS Graduate • COMSATS University Islamabad
+                </span>
+                <span className="text-xs text-cyan-400 font-mono font-semibold flex items-center gap-1">
+                  <MapPin className="w-3 h-3 inline" /> Lahore, PK
+                </span>
+              </div>
             </div>
 
             {/* Main Greeting & Heading */}
