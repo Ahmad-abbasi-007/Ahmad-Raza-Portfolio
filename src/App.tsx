@@ -8,7 +8,6 @@ import { Navbar } from './components/common/Navbar';
 import { HeroSection } from './components/hero/HeroSection';
 import { AboutSection } from './components/about/AboutSection';
 import { SkillsSection } from './components/skills/SkillsSection';
-import { ProjectsSection } from './components/projects/ProjectsSection';
 import { FypSection } from './components/fyp/FypSection';
 import { EducationSection } from './components/education/EducationSection';
 import { StrengthsSection } from './components/strengths/StrengthsSection';
@@ -44,13 +43,10 @@ export const App: React.FC = () => {
             {/* 3. Skills / Tech Stack Section with Category Filter */}
             <SkillsSection />
 
-            {/* 4. Projects Section with Category Filters & Deep-dive Modals */}
-            <ProjectsSection />
-
-            {/* 5. FYP Final Year Project Section (COMSATS Automated Merit System) */}
+            {/* 4. FYP Final Year Project Section (COMSATS Automated Merit System) */}
             <FypSection />
 
-            {/* 6. Education Timeline (COMSATS, PGC, Matric) */}
+            {/* 5. Education Timeline (COMSATS, PGC, Matric) */}
             <EducationSection />
 
             {/* 6. Key Strengths Cards */}

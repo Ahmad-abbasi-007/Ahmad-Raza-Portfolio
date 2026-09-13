@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Printer, Copy, Check, Mail, Phone, MapPin } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../common/SocialIcons';
 import { Modal } from '../common/Modal';
-import { contactData, projectsData, educationData } from '../../data/portfolioData';
+import { contactData, projectsData, educationData, fypProjectData } from '../../data/portfolioData';
 import { useToast } from '../common/Toast';
 
 interface ResumeModalProps {
@@ -34,12 +34,21 @@ Motivated Frontend Web Developer and recent Computer Science graduate from COMSA
 TECHNICAL SKILLS
 ----------------
 - Frontend: HTML5, CSS3, JavaScript (ES6+), TypeScript, React JS
-- UI Frameworks: Material UI (MUI), Bootstrap
+- UI Frameworks: Material UI (MUI), Bootstrap, Tailwind CSS
 - Backend/Runtime: Node JS
 - Tools: Git, GitHub, VS Code, npm
 
-PROJECTS
---------
+FINAL YEAR PROJECT (CAPSTONE)
+------------------------------
+Title: ${fypProjectData.title}
+Institution: ${fypProjectData.institution}
+Live App: ${fypProjectData.liveUrl}
+Tech: React JS, JavaScript ES6+, Tailwind CSS, Node.js, Express, REST APIs
+- Developed an automated scholarship and merit calculation portal for Undergraduate and Graduate students.
+- Implemented real-time criteria verification, automated merit list generation, and responsive student/admin dashboards.
+
+FEATURED PROJECTS
+-----------------
 1. Personal Portfolio Website
    Tech: HTML, CSS, JavaScript, React JS
    - Designed and developed a fully responsive personal portfolio showcasing frontend skills, projects, and contact information.
@@ -187,6 +196,33 @@ KEY STRENGTHS
               <div>
                 <strong className="text-white">Developer Tools:</strong> Git, GitHub, VS Code, npm
               </div>
+            </div>
+          </div>
+
+          {/* Final Year Project (Capstone) */}
+          <div>
+            <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-purple-400 mb-3 border-b border-slate-800 pb-1 flex items-center justify-between">
+              <span>Final Year Project (Capstone)</span>
+              <span className="text-[10px] text-cyan-400 font-mono">COMSATS University</span>
+            </h2>
+            <div className="p-3.5 rounded-xl bg-slate-800/40 border border-purple-500/20 text-xs">
+              <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+                <a
+                  href={fypProjectData.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-white text-sm hover:text-cyan-300 transition-colors inline-flex items-center gap-1"
+                >
+                  <span>{fypProjectData.title}</span>
+                  <span className="text-[10px] text-cyan-400 font-mono">↗</span>
+                </a>
+                <span className="text-[11px] font-mono text-purple-300">
+                  React JS, JavaScript, Tailwind CSS, Node.js, Vercel
+                </span>
+              </div>
+              <p className="text-slate-300 leading-relaxed text-xs">
+                {fypProjectData.summary}
+              </p>
             </div>
           </div>
 
