@@ -364,7 +364,7 @@ export const strengthsData: StrengthItem[] = [
 export const fypProjectData = {
   id: "fyp-scholarship-system",
   sectionBadge: "FINAL YEAR PROJECT (FYP)",
-  title: "Automated Merit List Generation System for both Graduate and UnderGraduate Stidents",
+  title: "Automated Merit List Generation System for both Graduate and UnderGraduate Students",
   shortTitle: "COMSATS Scholarship & Automated Merit System",
   institution: "COMSATS University Islamabad (Abbottabad Campus)",
   role: "Lead Frontend & System Developer",
