@@ -193,3 +193,200 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* ==========================================================================
+   PRINT / PDF EXPORT STYLES (Clean ATS-Formatted 1-2 Page Resume)
+   ========================================================================== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm;
+  }
+
+  /* Reset global backgrounds and colors */
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 9.5pt !important;
+    line-height: 1.35 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Hide the rest of the website */
+  #root > div > header,
+  #root > div > main,
+  #root > div > footer,
+  #root > div > div:not(.z-50),
+  #root > div > button,
+  .custom-cursor,
+  .mesh-grid,
+  .glass-nav,
+  .no-print,
+  .print\:hidden,
+  button,
+  [aria-label="Close dialog"],
+  [role="status"] {
+    display: none !important;
+  }
+
+  /* Flatten and display modal wrapper cleanly */
+  .fixed.inset-0.z-50 {
+    position: static !important;
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
+    background: transparent !important;
+  }
+
+  .fixed.inset-0.z-50 > div:first-child {
+    display: none !important;
+  }
+
+  .fixed.inset-0.z-50 > div {
+    max-width: 100% !important;
+    width: 100% !important;
+    max-height: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    background: transparent !important;
+  }
+
+  .fixed.inset-0.z-50 > div > div:last-child {
+    padding: 0 !important;
+    overflow: visible !important;
+    max-height: none !important;
+  }
+
+  /* Printable CV Main Container */
+  #printable-cv {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #ffffff !important;
+    color: #1e293b !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    font-size: 9.5pt !important;
+    line-height: 1.35 !important;
+  }
+
+  #printable-cv .space-y-6 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 8px !important;
+  }
+
+  #printable-cv .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 6px !important;
+  }
+
+  #printable-cv .space-y-3 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 5px !important;
+  }
+
+  /* Resume Header */
+  #printable-cv .border-b {
+    border-bottom: 1.5px solid #94a3b8 !important;
+    padding-bottom: 6px !important;
+    margin-bottom: 6px !important;
+  }
+
+  #printable-cv h1 {
+    color: #0f172a !important;
+    font-size: 16pt !important;
+    font-weight: 800 !important;
+    margin-bottom: 1px !important;
+    line-height: 1.1 !important;
+  }
+
+  #printable-cv p.font-semibold,
+  #printable-cv .text-cyan-400 {
+    color: #0284c7 !important;
+  }
+
+  #printable-cv .text-purple-400 {
+    color: #0284c7 !important;
+  }
+
+  /* Section Headings */
+  #printable-cv h2 {
+    color: #0369a1 !important;
+    font-size: 9.5pt !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    border-bottom: 1px solid #cbd5e1 !important;
+    padding-bottom: 2px !important;
+    margin-bottom: 5px !important;
+  }
+
+  /* Text elements */
+  #printable-cv p,
+  #printable-cv span,
+  #printable-cv li,
+  #printable-cv div {
+    color: #334155 !important;
+  }
+
+  #printable-cv strong,
+  #printable-cv .font-bold {
+    color: #0f172a !important;
+    font-weight: 700 !important;
+  }
+
+  #printable-cv a {
+    color: #0284c7 !important;
+    text-decoration: none !important;
+  }
+
+  #printable-cv svg {
+    display: inline-block !important;
+    stroke: #0284c7 !important;
+    color: #0284c7 !important;
+  }
+
+  /* Cards in print */
+  #printable-cv .bg-slate-800\/40,
+  #printable-cv .bg-slate-900\/60 {
+    background-color: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 4px !important;
+    padding: 6px 8px !important;
+  }
+
+  /* Page-break avoidance */
+  #printable-cv > div {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  #printable-cv .space-y-4 > div,
+  #printable-cv .space-y-3 > div {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+

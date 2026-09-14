@@ -37,19 +37,19 @@ export const Modal: React.FC<ModalProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto print:p-0 print:overflow-visible print:static print:block">
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-black/75 backdrop-blur-md transition-opacity animate-in fade-in"
+        className="fixed inset-0 bg-black/75 backdrop-blur-md transition-opacity animate-in fade-in no-print print:hidden"
         onClick={onClose}
       />
 
       {/* Modal Box */}
       <div
-        className={`relative z-10 w-full ${maxWidth} bg-[#0D1322] dark:bg-[#0D1322] border border-slate-700/60 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] my-auto animate-in zoom-in-95 duration-200`}
+        className={`relative z-10 w-full ${maxWidth} bg-[#0D1322] dark:bg-[#0D1322] border border-slate-700/60 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] my-auto animate-in zoom-in-95 duration-200 print:bg-transparent print:border-0 print:shadow-none print:max-h-none print:overflow-visible print:w-full print:max-w-none print:m-0 print:static`}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800/80 bg-slate-900/50">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800/80 bg-slate-900/50 no-print print:hidden">
           {title ? (
             <h3 className="text-xl font-bold text-slate-100 font-display tracking-tight">
               {title}
@@ -67,7 +67,7 @@ export const Modal: React.FC<ModalProps> = ({
         </div>
 
         {/* Content Body */}
-        <div className="p-6 overflow-y-auto custom-scrollbar text-slate-300">
+        <div className="p-6 overflow-y-auto custom-scrollbar text-slate-300 print:p-0 print:overflow-visible print:text-slate-900">
           {children}
         </div>
       </div>

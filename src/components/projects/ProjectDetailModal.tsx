@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, CheckCircle, Code2, Layers, Cpu } from 'lucide-react';
+import { ExternalLink, CheckCircle, Code2, Layers, Cpu, FolderGit2 } from 'lucide-react';
 import { GithubIcon } from '../common/SocialIcons';
 import { Modal } from '../common/Modal';
 import type { Project } from '../../types/portfolio';
@@ -18,21 +18,33 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
   if (!project) return null;
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} title={project.title} maxWidth="max-w-4xl">
+    <Modal isOpen={isOpen} onClose={onClose} title={project.title} maxWidth="max-w-3xl">
       <div className="space-y-6">
-        {/* Project Image Banner */}
-        <div className="relative w-full h-56 sm:h-72 rounded-xl overflow-hidden border border-slate-800 bg-slate-900">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-full object-cover object-top"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
-          <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-            <span className="px-3 py-1 rounded-md bg-slate-900/90 text-cyan-400 text-xs font-mono border border-cyan-500/30">
-              {project.subtitle}
-            </span>
+        {/* Top Header Technical Card (No Photo) */}
+        <div className="p-5 rounded-xl bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-slate-900/90 border border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-3.5">
+            <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shrink-0">
+              <FolderGit2 className="w-6 h-6" />
+            </div>
+            <div>
+              <span className="px-2.5 py-0.5 rounded-md bg-cyan-950/40 text-cyan-300 text-xs font-mono border border-cyan-500/30 mb-1 inline-block">
+                {project.subtitle}
+              </span>
+              <h3 className="text-lg font-bold text-white font-display">
+                {project.title}
+              </h3>
+            </div>
           </div>
+
+          <a
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs shadow-md transition-all active:scale-95 shrink-0"
+          >
+            <GithubIcon className="w-4 h-4 text-slate-950" />
+            <span>Open Repository</span>
+          </a>
         </div>
 
         {/* Description */}
@@ -112,7 +124,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold border border-slate-700 transition-colors"
             >
               <GithubIcon className="w-4 h-4" />
-              <span>View GitHub Profile</span>
+              <span>View GitHub Repository</span>
             </a>
 
             {project.liveDemoUrl && project.liveDemoUrl !== '#' && (

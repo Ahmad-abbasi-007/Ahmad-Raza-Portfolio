@@ -24,7 +24,7 @@ AHMAD RAZA — FRONTEND WEB DEVELOPER
 ================================================
 Email: ${contactData.email} | Phone: ${contactData.phone}
 Location: ${contactData.location}
-GitHub: https://${contactData.githubUsername}
+GitHub: ${contactData.githubUrl}
 LinkedIn: ${contactData.linkedinUrl}
 
 PROFESSIONAL SUMMARY
@@ -49,25 +49,28 @@ Tech: React JS, JavaScript ES6+, Tailwind CSS, Node.js, Express, REST APIs
 
 FEATURED PROJECTS
 -----------------
-1. Personal Portfolio Website
-   Tech: HTML, CSS, JavaScript, React JS
-   - Designed and developed a fully responsive personal portfolio showcasing frontend skills, projects, and contact information.
-   - Implemented smooth animations and interactive UI elements to enhance the user experience across different device sizes.
+1. Grocifier-StoreBy-Abbasi
+   Tech: JavaScript ES6+, HTML5, CSS3, Bootstrap
+   GitHub: https://github.com/Ahmad-abbasi-007/Grocifier-StoreBy-Abbasi
+   - Developed an interactive online grocery storefront with dynamic category browsing and real-time cart subtotal calculation.
+   - Built responsive mobile-first UI with product filtering, item quantity controls, and checkout validation.
 
-2. Responsive E-Commerce UI
-   Tech: React JS, MUI, CSS, JavaScript
-   - Built a multi-page e-commerce frontend with product listing, cart, and checkout UI components using React JS and MUI.
-   - Applied reusable component architecture and React state management for dynamic product filtering and cart interactions.
+2. E-Commerece-Web-by-Abbasi-react
+   Tech: React JS, JavaScript ES6+, CSS3, HTML5
+   GitHub: https://github.com/Ahmad-abbasi-007/E-Commerece-Web-by-Abbasi-react
+   - Built a component-driven e-commerce application in React with dynamic product filtering and reactive cart state management.
+   - Designed modular components with props synchronization, sliding cart drawer, and responsive modern styling.
 
-3. Interactive Web Landing Pages
-   Tech: HTML, CSS, Bootstrap, JavaScript
-   - Created multiple pixel-perfect, mobile-responsive landing pages focusing on layout, typography, and cross-browser compatibility.
-   - Integrated JavaScript-driven features including modals, carousels, and form validation.
+3. E-Commerece
+   Tech: JavaScript, HTML5, CSS3, Bootstrap
+   GitHub: https://github.com/Ahmad-abbasi-007/E-Commerece
+   - Developed a responsive commercial storefront featuring product catalog grids, interactive cart drawer, and order form validation.
+   - Applied event-driven JavaScript design and mobile-first CSS architecture for seamless cross-device browsing.
 
-4. React Component Library
-   Tech: React JS, TypeScript, MUI
-   - Built a collection of reusable, typed React components including buttons, inputs, cards, and modals using TypeScript.
-   - Demonstrated understanding of props, hooks, and component composition.
+4. Personal Portfolio Website
+   Tech: React JS, TypeScript, JavaScript ES6+, Tailwind CSS
+   GitHub: https://github.com/Ahmad-abbasi-007/Ahmad-Raza-Portfolio
+   - Designed and built a modern developer portfolio with interactive terminal sandbox, ATS printable resume modal, and dark/light theme persistence.
 
 EXPERIENCE & CERTIFICATIONS
 ----------------------------
@@ -105,10 +108,10 @@ KEY STRENGTHS
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} title="Curriculum Vitae (CV)" maxWidth="max-w-4xl">
-      <div className="space-y-6">
+      <div className="space-y-6 print:space-y-0">
         
         {/* Top Control Bar */}
-        <div className="flex flex-wrap items-center justify-between gap-3 p-3 rounded-xl bg-slate-900/90 border border-slate-800">
+        <div className="no-print print:hidden flex flex-wrap items-center justify-between gap-3 p-3 rounded-xl bg-slate-900/90 border border-slate-800">
           <div className="flex items-center gap-2 text-xs text-slate-300 font-mono">
             <span className="w-2 h-2 rounded-full bg-emerald-400" />
             <span>ATS-Formatted • Verified Information</span>
@@ -135,7 +138,7 @@ KEY STRENGTHS
         </div>
 
         {/* Formatted CV Document Container (Printable) */}
-        <div id="printable-cv" className="p-6 sm:p-8 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-200 text-sm leading-relaxed space-y-6">
+        <div id="printable-cv" className="p-6 sm:p-8 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-200 text-sm leading-relaxed space-y-6 print:p-0 print:border-0 print:bg-white print:text-slate-900 print:shadow-none print:rounded-none print:space-y-4">
           
           {/* Resume Header */}
           <div className="border-b border-slate-800 pb-5">

@@ -172,11 +172,83 @@ export const skillsData: Skill[] = [
 
 export const projectsData: Project[] = [
   {
+    id: "grocifier-store",
+    title: "Grocifier-StoreBy-Abbasi",
+    subtitle: "Online Grocery & Fresh Produce Web Store",
+    category: ["all", "javascript", "ui"],
+    description: "An interactive online grocery storefront allowing users to browse fresh produce categories, filter items, add groceries to cart, and compute dynamic order totals in real-time.",
+    fullDescription: "A responsive and interactive grocery shopping web application developed using modern JavaScript, HTML5, and CSS3. Features rich category browsing (Fruits, Vegetables, Dairy, Bakery), real-time cart quantity controls, checkout total computation, and responsive mobile-first layouts.",
+    features: [
+      "Category-based grocery navigation and real-time product filtering",
+      "Interactive shopping cart with live item counter and subtotal calculation",
+      "Item quantity increments, decrements, and removal handling",
+      "Checkout modal with customer delivery details validation",
+      "Mobile-first responsive grid system across all viewports"
+    ],
+    technologies: ["JavaScript ES6+", "HTML5", "CSS3", "Bootstrap", "DOM APIs"],
+    image: ecommerceImg,
+    githubUrl: "https://github.com/Ahmad-abbasi-007/Grocifier-StoreBy-Abbasi",
+    liveDemoUrl: "#",
+    architectureHighlights: [
+      "Modular JavaScript functions for DOM manipulation and shopping cart state",
+      "Responsive CSS layout with smooth hover transitions and badge animations",
+      "Client-side input verification for order forms and delivery notes"
+    ]
+  },
+  {
+    id: "ecommerce-react",
+    title: "E-Commerece-Web-by-Abbasi-react",
+    subtitle: "Component-Driven React Storefront Platform",
+    category: ["all", "react", "javascript", "ui"],
+    description: "Built a modern, multi-page component-driven e-commerce application using React JS. Features dynamic product filtering, reactive cart drawer state management, and clean responsive UI.",
+    fullDescription: "A production-style e-commerce storefront frontend developed with React JS. Emphasizes component reusability, props-driven state synchronization, dynamic catalog filtering, responsive product showcase grids, and sleek drawer cart interactions.",
+    features: [
+      "Dynamic product catalog filtering by price, rating, and categories",
+      "Interactive cart drawer with synchronized item counts and price summary",
+      "Reusable product card components with zoom previews and quick-add actions",
+      "Multi-step checkout workflow with shipping and payment form validation",
+      "Clean responsive layout with custom modern CSS styling"
+    ],
+    technologies: ["React JS", "JavaScript ES6+", "CSS3", "HTML5", "React Hooks"],
+    image: componentsImg,
+    githubUrl: "https://github.com/Ahmad-abbasi-007/E-Commerece-Web-by-Abbasi-react",
+    liveDemoUrl: "#",
+    architectureHighlights: [
+      "React hooks (useState, useEffect, useMemo) for synchronized cart state",
+      "Decoupled architecture separating layout, catalog, and drawer modal components",
+      "Modular CSS styling with fluid responsive breakpoints"
+    ]
+  },
+  {
+    id: "ecommerce-vanilla",
+    title: "E-Commerece",
+    subtitle: "Interactive Web Storefront & Shopping Cart",
+    category: ["all", "javascript", "ui"],
+    description: "Developed a responsive e-commerce web storefront with rich product listings, category filters, interactive cart drawer, and seamless checkout flow using modern JavaScript.",
+    fullDescription: "A clean and responsive commercial web storefront designed to deliver high user engagement. Features an interactive product showcase, cart management workflows, modal product views, and responsive styling across mobile and desktop devices.",
+    features: [
+      "Featured product grid with interactive preview modals",
+      "Real-time shopping cart state management with live badge updates",
+      "Category filtering and keyword product search",
+      "Responsive layout structure adhering to modern UI design standards",
+      "Form validation for checkout and customer inquiry submissions"
+    ],
+    technologies: ["JavaScript", "HTML5", "CSS3", "Bootstrap", "Responsive UI"],
+    image: landingImg,
+    githubUrl: "https://github.com/Ahmad-abbasi-007/E-Commerece",
+    liveDemoUrl: "#",
+    architectureHighlights: [
+      "Event-driven JavaScript design pattern with clean separation of concerns",
+      "Semantic HTML5 markup with accessible form elements",
+      "Cross-browser tested CSS layout for fluid rendering across viewports"
+    ]
+  },
+  {
     id: "portfolio-website",
     title: "Personal Portfolio Website",
     subtitle: "Modern Interactive Developer Showcase",
-    category: ["all", "react", "javascript"],
-    description: "Designed and developed a fully responsive personal portfolio showcasing frontend skills, projects, and contact information. Implemented smooth animations and interactive UI elements to enhance the user experience across different device sizes.",
+    category: ["all", "react", "typescript", "javascript"],
+    description: "Designed and developed a fully responsive personal portfolio showcasing frontend skills, projects, and contact information. Implemented smooth animations, interactive terminal, and ATS printable CV modal.",
     fullDescription: "A production-grade developer portfolio engineered to demonstrate modern frontend engineering capabilities. Features smooth section transitions, an interactive terminal showcase, dynamic theme adaptation, responsive navigation, and accessible interactive modals.",
     features: [
       "Modular React component structure with typed interfaces",
@@ -188,81 +260,12 @@ export const projectsData: Project[] = [
     ],
     technologies: ["React JS", "JavaScript ES6+", "HTML5", "CSS3", "TypeScript"],
     image: portfolioImg,
-    githubUrl: "https://github.com/Ahmad-abbasi-007",
+    githubUrl: "https://github.com/Ahmad-abbasi-007/Ahmad-Raza-Portfolio",
     liveDemoUrl: "#",
     architectureHighlights: [
       "Custom hook for viewport scroll progress tracking",
       "Centralized state management for dark/light theme persistence",
       "Fully responsive CSS grid and flexbox layout across 320px to 4K displays"
-    ]
-  },
-  {
-    id: "ecommerce-ui",
-    title: "Responsive E-Commerce UI",
-    subtitle: "Multi-page Storefront & Cart Experience",
-    category: ["all", "react", "ui", "javascript"],
-    description: "Built a multi-page e-commerce frontend with product listing, cart, and checkout UI components using React JS and MUI. Applied reusable component architecture and React state management for dynamic product filtering and cart interactions.",
-    fullDescription: "An intuitive and modern e-commerce storefront frontend that emphasizes user journey and smooth cart interactions. Integrates Material UI's component system with custom theme tokens for a refined modern aesthetic.",
-    features: [
-      "Dynamic catalog filtering by price range, categories, and keyword search",
-      "Interactive sliding cart drawer with real-time total computation",
-      "Reusable product card grid with hover zoom previews and badges",
-      "Multi-step checkout interface with validation for shipping details",
-      "MUI theme customization with sleek dark and light color tokens"
-    ],
-    technologies: ["React JS", "MUI (Material UI)", "CSS3", "JavaScript"],
-    image: ecommerceImg,
-    githubUrl: "https://github.com/Ahmad-abbasi-007",
-    architectureHighlights: [
-      "React state orchestration for dynamic cart additions and quantity updates",
-      "Component decoupling between layout, product items, and cart side-drawer",
-      "Accessible ARIA dialogs and drawer accessibility attributes"
-    ]
-  },
-  {
-    id: "landing-pages",
-    title: "Interactive Web Landing Pages",
-    subtitle: "Pixel-Perfect Responsive Client Showcases",
-    category: ["all", "ui", "javascript"],
-    description: "Created multiple pixel-perfect, mobile-responsive landing pages focusing on layout, typography, and cross-browser compatibility. Integrated JavaScript-driven features including modals, carousels, and form validation.",
-    fullDescription: "A series of high-converting web landing pages tailored for business and agency needs. Focused on performance, visual polish, precise typography hierarchy, and smooth micro-interactions across legacy and modern web browsers.",
-    features: [
-      "Fluid 12-column Bootstrap grid layouts optimized for 320px to large screens",
-      "Custom JavaScript modal dialogs and interactive image carousels",
-      "Dynamic form validation with instantaneous user feedback",
-      "Optimized assets and web typography with fast render metrics",
-      "Cross-browser tested across Chrome, Firefox, Safari, and Edge"
-    ],
-    technologies: ["HTML5", "CSS3", "Bootstrap", "JavaScript ES6+"],
-    image: landingImg,
-    githubUrl: "https://github.com/Ahmad-abbasi-007",
-    architectureHighlights: [
-      "Semantic HTML5 landmark tags (<header>, <main>, <section>, <article>, <footer>)",
-      "BEM naming convention for clean, collision-free CSS class hierarchies",
-      "Mobile-first responsive media queries"
-    ]
-  },
-  {
-    id: "component-library",
-    title: "React Component Library",
-    subtitle: "Modular & Type-Safe UI Design System",
-    category: ["all", "react", "typescript", "ui"],
-    description: "Built a collection of reusable, typed React components including buttons, inputs, cards, and modals using TypeScript. Demonstrated understanding of props, hooks, and component composition.",
-    fullDescription: "A developer-first UI component system built in React and TypeScript. Enforces strict TypeScript prop interfaces, compound component patterns, accessible keyboard interactions, and consistent styling tokens across common UI primitives.",
-    features: [
-      "Comprehensive component suite: Button, Input, Modal, Badge, Dropdown, Card",
-      "Strict TypeScript typings with generic prop interfaces and variant props",
-      "Accessible keyboard navigation (ESC close, Tab trapping, ARIA states)",
-      "Variant system supporting primary, secondary, outline, and danger modes",
-      "Interactive showcase sandbox allowing live prop manipulation"
-    ],
-    technologies: ["React JS", "TypeScript", "MUI", "CSS3"],
-    image: componentsImg,
-    githubUrl: "https://github.com/Ahmad-abbasi-007",
-    architectureHighlights: [
-      "Compound component design pattern for modular modal dialogs and menus",
-      "Polymorphic 'as' prop support for flexible semantic rendering",
-      "Zero runtime type errors through rigorous compile-time type validation"
     ]
   }
 ];
@@ -364,7 +367,7 @@ export const strengthsData: StrengthItem[] = [
 export const fypProjectData = {
   id: "fyp-scholarship-system",
   sectionBadge: "FINAL YEAR PROJECT (FYP)",
-  title: "Automated Merit List Generation System for both Graduate and UnderGraduate Students",
+  title: "Automated Merit List Generation System for both Graduate and Undergraduate Students",
   shortTitle: "COMSATS Scholarship & Automated Merit System",
   institution: "COMSATS University Islamabad (Abbottabad Campus)",
   role: "Lead Frontend & System Developer",
@@ -378,7 +381,7 @@ export const fypProjectData = {
       description: "Eliminates manual discrepancies by automatically calculating academic weights, CGPA thresholds, and quotas according to institutional guidelines."
     },
     {
-      title: "Dual Academic Tier Support (Graduate & UnderGraduate)",
+      title: "Dual Academic Tier Support (Graduate & Undergraduate)",
       description: "Dedicated calculation pathways tailored specifically for both Undergraduate and Graduate degree requirements and scholarship schemes."
     },
     {
