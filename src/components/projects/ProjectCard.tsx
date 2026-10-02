@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, FolderGit2, CheckCircle2, Layers } from 'lucide-react';
+import { ArrowUpRight, FolderGit2, CheckCircle2, Layers, ExternalLink } from 'lucide-react';
 import { GithubIcon } from '../common/SocialIcons';
 import type { Project } from '../../types/portfolio';
 
@@ -27,16 +27,30 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) =
             </span>
           </div>
 
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 hover:border-slate-700 transition-all hover:scale-105 shrink-0"
-            title="Open GitHub Repository"
-            aria-label="View GitHub Repository"
-          >
-            <GithubIcon className="w-4 h-4" />
-          </a>
+          <div className="flex items-center gap-2 shrink-0">
+            {project.liveDemoUrl && project.liveDemoUrl !== '#' && (
+              <a
+                href={project.liveDemoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 hover:border-cyan-500/60 transition-all hover:scale-105"
+                title="Open Live Demo"
+                aria-label="View Live Demo"
+              >
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            )}
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 hover:border-slate-700 transition-all hover:scale-105"
+              title="Open GitHub Repository"
+              aria-label="View GitHub Repository"
+            >
+              <GithubIcon className="w-4 h-4" />
+            </a>
+          </div>
         </div>
 
         {/* Project Title */}
@@ -87,15 +101,29 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) =
             <span>Details &amp; Architecture</span>
           </button>
 
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white text-xs font-semibold border border-slate-700 hover:border-slate-600 transition-all active:scale-95"
-          >
-            <GithubIcon className="w-3.5 h-3.5" />
-            <span>GitHub</span>
-          </a>
+          <div className="flex items-center gap-2">
+            {project.liveDemoUrl && project.liveDemoUrl !== '#' && (
+              <a
+                href={project.liveDemoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 hover:text-cyan-200 text-xs font-semibold border border-cyan-500/30 hover:border-cyan-500/60 transition-all active:scale-95"
+              >
+                <ExternalLink className="w-3.5 h-3.5" />
+                <span>Live Demo</span>
+              </a>
+            )}
+
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white text-xs font-semibold border border-slate-700 hover:border-slate-600 transition-all active:scale-95"
+            >
+              <GithubIcon className="w-3.5 h-3.5" />
+              <span>GitHub</span>
+            </a>
+          </div>
         </div>
       </div>
 

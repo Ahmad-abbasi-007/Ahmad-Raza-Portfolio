@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon, FileText, Sparkles } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
-import { contactData, profileImg } from '../../data/portfolioData';
+import { contactData } from '../../data/portfolioData';
+import { LogoAR } from './LogoAR';
 
 interface NavbarProps {
   onOpenResume: () => void;
@@ -72,20 +73,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Logo with Ahmad's Profile Avatar */}
+        {/* Brand Logo with AR Monogram */}
         <a
           href="#home"
           onClick={(e) => handleNavClick(e, '#home')}
           className="group flex items-center gap-2.5 text-slate-100 dark:text-slate-100 transition-transform active:scale-95"
         >
-          <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-600 p-[1.5px] shadow-[0_0_15px_rgba(6,182,212,0.35)] group-hover:shadow-[0_0_20px_rgba(6,182,212,0.6)] transition-all">
-            <img 
-              src={profileImg} 
-              alt={contactData.name} 
-              className="w-full h-full object-cover rounded-[10px]"
-            />
-            <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-400 border-2 border-[#090D16]" />
-          </div>
+          <LogoAR size="md" showStatus={true} />
           <div className="flex flex-col">
             <span className="font-display font-bold text-lg leading-tight tracking-tight text-slate-900 dark:text-white group-hover:text-cyan-400 transition-colors">
               {contactData.name}

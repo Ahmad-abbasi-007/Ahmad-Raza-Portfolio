@@ -1,8 +1,9 @@
 import type { ContactInfo, EducationItem, Project, Skill, StrengthItem } from '../types/portfolio';
+import fintrackImg from '../assets/projects/fintrack-ai.jpg';
+import weatherImg from '../assets/projects/weather-app.jpg';
 import portfolioImg from '../assets/projects/portfolio.jpg';
 import ecommerceImg from '../assets/projects/ecommerce.jpg';
 import landingImg from '../assets/projects/landing.jpg';
-import componentsImg from '../assets/projects/components.jpg';
 import fypImg from '../assets/projects/fyp-scholarship.png';
 import fentixCertImg from '../assets/certificates/fentix-internship-certificate.jpg';
 import profileImg from '../assets/profile.jpg';
@@ -172,6 +173,33 @@ export const skillsData: Skill[] = [
 
 export const projectsData: Project[] = [
   {
+    id: "fintrack-ai",
+    title: "FinTrack AI",
+    subtitle: "AI-Powered Personal Finance & Smart Expense Platform",
+    category: ["all", "react", "typescript", "ui"],
+    description: "An AI-powered personal finance platform with Google Gemini & Groq spending insights, OCR receipt scanning, multi-account budget tracking, and interactive Recharts visualizations.",
+    fullDescription: "FinTrack AI is a modern full-stack personal finance and expense intelligence web platform built with Next.js 16 (App Router), TypeScript, Tailwind CSS, Supabase, and Google Gemini & Groq AI. It automates financial tracking with Gemini Vision receipt OCR, delivers proactive AI budgeting insights, manages multi-account transfers, and renders interactive spending analytics via Recharts.",
+    features: [
+      "AI Spending Insights & Budget Suggestions powered by Google Gemini and Groq",
+      "Smart Receipt Scanner converting receipt images into structured transactions via Gemini Vision OCR",
+      "Multi-Account Tracking (Cash, Bank, Cards, Wallets) with transfer workflows",
+      "Custom expense categories and recurring scheduled transactions (weekly/monthly/yearly)",
+      "Budget & Savings goals with live color-coded threshold progress alerts",
+      "Interactive Recharts financial analytics (pie, bar, month comparisons) and CSV report export",
+      "Supabase Authentication with PostgreSQL Row Level Security (RLS) & Multi-Currency support"
+    ],
+    technologies: ["Next.js 16", "React", "TypeScript", "Tailwind CSS", "Google Gemini AI", "Groq AI", "Supabase", "Recharts", "PWA"],
+    image: fintrackImg,
+    githubUrl: "https://github.com/Ahmad-abbasi-007/fintrack-ai",
+    liveDemoUrl: "https://fintrack-ai-lime.vercel.app",
+    architectureHighlights: [
+      "Next.js 16 App Router with Turbopack for high-performance server and client rendering",
+      "Gemini Vision OCR pipeline transforming raw image receipts into typed transaction records",
+      "Supabase PostgreSQL backend with Row Level Security (RLS) and real-time state synchronization",
+      "Mobile-first responsive PWA with multi-currency conversion and dark/light themes"
+    ]
+  },
+  {
     id: "grocifier-store",
     title: "Grocifier-StoreBy-Abbasi",
     subtitle: "Online Grocery & Fresh Produce Web Store",
@@ -188,7 +216,7 @@ export const projectsData: Project[] = [
     technologies: ["JavaScript ES6+", "HTML5", "CSS3", "Bootstrap", "DOM APIs"],
     image: ecommerceImg,
     githubUrl: "https://github.com/Ahmad-abbasi-007/Grocifier-StoreBy-Abbasi",
-    liveDemoUrl: "#",
+    liveDemoUrl: "https://grocifier-store-by-abbasi.vercel.app",
     architectureHighlights: [
       "Modular JavaScript functions for DOM manipulation and shopping cart state",
       "Responsive CSS layout with smooth hover transitions and badge animations",
@@ -196,27 +224,26 @@ export const projectsData: Project[] = [
     ]
   },
   {
-    id: "ecommerce-react",
-    title: "E-Commerece-Web-by-Abbasi-react",
-    subtitle: "Component-Driven React Storefront Platform",
+    id: "weather-app-react",
+    title: "Weather App — React JS",
+    subtitle: "Real-Time Global Weather & Forecast Dashboard",
     category: ["all", "react", "javascript", "ui"],
-    description: "Built a modern, multi-page component-driven e-commerce application using React JS. Features dynamic product filtering, reactive cart drawer state management, and clean responsive UI.",
-    fullDescription: "A production-style e-commerce storefront frontend developed with React JS. Emphasizes component reusability, props-driven state synchronization, dynamic catalog filtering, responsive product showcase grids, and sleek drawer cart interactions.",
+    description: "A responsive weather application built with React JS providing real-time meteorological conditions, temperature metrics, dynamic weather icons, and multi-city forecast search.",
+    fullDescription: "A sleek and reactive weather tracking web application developed with React JS. Integrates live weather APIs to provide instantaneous temperature, humidity, wind velocity, atmospheric pressure, and multi-day forecasting with responsive UI adaptation.",
     features: [
-      "Dynamic product catalog filtering by price, rating, and categories",
-      "Interactive cart drawer with synchronized item counts and price summary",
-      "Reusable product card components with zoom previews and quick-add actions",
-      "Multi-step checkout workflow with shipping and payment form validation",
-      "Clean responsive layout with custom modern CSS styling"
+      "Real-time weather data fetching with city & geolocation search",
+      "Dynamic UI themes adapting to day/night and weather conditions (Rain, Sun, Clouds, Snow)",
+      "Multi-metric display: Temperature, Feels-like, Humidity, Wind Speed, UV Index",
+      "Responsive card interface with fluid layout across mobile and desktop devices"
     ],
-    technologies: ["React JS", "JavaScript ES6+", "CSS3", "HTML5", "React Hooks"],
-    image: componentsImg,
-    githubUrl: "https://github.com/Ahmad-abbasi-007/E-Commerece-Web-by-Abbasi-react",
-    liveDemoUrl: "#",
+    technologies: ["React JS", "JavaScript ES6+", "REST APIs", "CSS3", "Bootstrap"],
+    image: weatherImg,
+    githubUrl: "https://github.com/Ahmad-abbasi-007/Weather_App-React.js",
+    liveDemoUrl: "https://weather-app-react-js-livid.vercel.app",
     architectureHighlights: [
-      "React hooks (useState, useEffect, useMemo) for synchronized cart state",
-      "Decoupled architecture separating layout, catalog, and drawer modal components",
-      "Modular CSS styling with fluid responsive breakpoints"
+      "Asynchronous fetch workflow with debounced search and robust error fallback",
+      "Custom React state management for geolocation coordinates and metric unit toggling",
+      "Component-driven layout with dynamic weather icon rendering"
     ]
   },
   {
@@ -236,7 +263,7 @@ export const projectsData: Project[] = [
     technologies: ["JavaScript", "HTML5", "CSS3", "Bootstrap", "Responsive UI"],
     image: landingImg,
     githubUrl: "https://github.com/Ahmad-abbasi-007/E-Commerece",
-    liveDemoUrl: "#",
+    liveDemoUrl: "https://e-commerece-red.vercel.app",
     architectureHighlights: [
       "Event-driven JavaScript design pattern with clean separation of concerns",
       "Semantic HTML5 markup with accessible form elements",
@@ -261,7 +288,7 @@ export const projectsData: Project[] = [
     technologies: ["React JS", "JavaScript ES6+", "HTML5", "CSS3", "TypeScript"],
     image: portfolioImg,
     githubUrl: "https://github.com/Ahmad-abbasi-007/Ahmad-Raza-Portfolio",
-    liveDemoUrl: "#",
+    liveDemoUrl: "https://ahmad-raza-portfolio-vert.vercel.app",
     architectureHighlights: [
       "Custom hook for viewport scroll progress tracking",
       "Centralized state management for dark/light theme persistence",

@@ -2,6 +2,7 @@ import React from 'react';
 import { Mail, ArrowUp } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../common/SocialIcons';
 import { contactData } from '../../data/portfolioData';
+import { LogoAR } from '../common/LogoAR';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -19,10 +20,8 @@ export const Footer: React.FC = () => {
           
           {/* Brand & Tagline */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="flex items-center gap-2 mb-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center font-display font-extrabold text-slate-950 text-sm">
-                AR
-              </div>
+            <div className="flex items-center gap-2.5 mb-2">
+              <LogoAR size="sm" showStatus={false} glow={false} />
               <span className="text-lg font-bold text-white font-display tracking-tight">
                 {contactData.name}
               </span>

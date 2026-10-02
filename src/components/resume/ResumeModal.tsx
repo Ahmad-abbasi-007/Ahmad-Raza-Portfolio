@@ -33,10 +33,10 @@ Motivated Frontend Web Developer and recent Computer Science graduate from COMSA
 
 TECHNICAL SKILLS
 ----------------
-- Frontend: HTML5, CSS3, JavaScript (ES6+), TypeScript, React JS
-- UI Frameworks: Material UI (MUI), Bootstrap, Tailwind CSS
-- Backend/Runtime: Node JS
-- Tools: Git, GitHub, VS Code, npm
+- Frontend: HTML5, CSS3, JavaScript (ES6+), TypeScript, React JS, Next.js 16
+- UI Frameworks: Tailwind CSS, Material UI (MUI), Bootstrap
+- Backend/Database: Node JS, Supabase (PostgreSQL), REST APIs
+- AI & Tools: Google Gemini AI, Groq AI, Git, GitHub, VS Code, npm
 
 FINAL YEAR PROJECT (CAPSTONE)
 ------------------------------
@@ -49,26 +49,35 @@ Tech: React JS, JavaScript ES6+, Tailwind CSS, Node.js, Express, REST APIs
 
 FEATURED PROJECTS
 -----------------
-1. Grocifier-StoreBy-Abbasi
+1. FinTrack AI — AI-Powered Personal Finance & Smart Expense Platform
+   Tech: Next.js 16, TypeScript, Tailwind CSS, Supabase, Google Gemini AI, Groq AI, Recharts
+   Live Demo: https://fintrack-ai-lime.vercel.app
+   GitHub: https://github.com/Ahmad-abbasi-007/fintrack-ai
+   - Built an intelligent full-stack finance web platform with AI-driven spending insights and automated receipt OCR scanning via Google Gemini Vision.
+   - Designed multi-account budget management, recurring bills scheduling, and interactive Recharts data visualizations.
+
+2. Grocifier-StoreBy-Abbasi
    Tech: JavaScript ES6+, HTML5, CSS3, Bootstrap
+   Live Demo: https://grocifier-store-by-abbasi.vercel.app
    GitHub: https://github.com/Ahmad-abbasi-007/Grocifier-StoreBy-Abbasi
    - Developed an interactive online grocery storefront with dynamic category browsing and real-time cart subtotal calculation.
    - Built responsive mobile-first UI with product filtering, item quantity controls, and checkout validation.
 
-2. E-Commerece-Web-by-Abbasi-react
-   Tech: React JS, JavaScript ES6+, CSS3, HTML5
-   GitHub: https://github.com/Ahmad-abbasi-007/E-Commerece-Web-by-Abbasi-react
-   - Built a component-driven e-commerce application in React with dynamic product filtering and reactive cart state management.
-   - Designed modular components with props synchronization, sliding cart drawer, and responsive modern styling.
+3. Weather App — React JS
+   Tech: React JS, JavaScript ES6+, REST APIs, CSS3, Bootstrap
+   Live Demo: https://weather-app-react-js-livid.vercel.app
+   GitHub: https://github.com/Ahmad-abbasi-007/Weather_App-React.js
+   - Developed a responsive weather web application integrating live weather APIs for real-time temperature, wind, and forecast conditions.
 
-3. E-Commerece
+4. E-Commerece
    Tech: JavaScript, HTML5, CSS3, Bootstrap
+   Live Demo: https://e-commerece-red.vercel.app
    GitHub: https://github.com/Ahmad-abbasi-007/E-Commerece
    - Developed a responsive commercial storefront featuring product catalog grids, interactive cart drawer, and order form validation.
-   - Applied event-driven JavaScript design and mobile-first CSS architecture for seamless cross-device browsing.
 
-4. Personal Portfolio Website
+5. Personal Portfolio Website
    Tech: React JS, TypeScript, JavaScript ES6+, Tailwind CSS
+   Live Demo: https://ahmad-raza-portfolio-vert.vercel.app
    GitHub: https://github.com/Ahmad-abbasi-007/Ahmad-Raza-Portfolio
    - Designed and built a modern developer portfolio with interactive terminal sandbox, ATS printable resume modal, and dark/light theme persistence.
 
@@ -244,10 +253,22 @@ KEY STRENGTHS
             <div className="space-y-4">
               {projectsData.map((project) => (
                 <div key={project.id} className="text-xs">
-                  <div className="flex items-baseline justify-between mb-1">
-                    <span className="font-bold text-white text-sm">
-                      {project.title}
-                    </span>
+                  <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+                    <div className="flex items-center gap-2">
+                      <span className="font-bold text-white text-sm">
+                        {project.title}
+                      </span>
+                      {project.liveDemoUrl && project.liveDemoUrl !== '#' && (
+                        <a
+                          href={project.liveDemoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[10px] font-mono text-cyan-400 hover:text-cyan-300 underline"
+                        >
+                          Live Demo ↗
+                        </a>
+                      )}
+                    </div>
                     <span className="text-[11px] font-mono text-cyan-400">
                       {project.technologies.join(', ')}
                     </span>
